@@ -1,0 +1,35 @@
+#include <stdio.h>
+int step(float x) {
+    if (x >= 0)
+        return 1;
+    else
+        return 0;
+}
+
+int main() {
+    float x1, x2;          
+    float w1, w2;         
+    float bias;           
+    float net;
+    int output;
+    printf("Enter input x1: ");
+    scanf("%f", &x1);
+
+    printf("Enter input x2: ");
+    scanf("%f", &x2);
+
+    printf("Enter weight w1: ");
+    scanf("%f", &w1);
+
+    printf("Enter weight w2: ");
+    scanf("%f", &w2);
+
+    printf("Enter bias: ");
+    scanf("%f", &bias);
+    net = (x1 * w1) + (x2 * w2) + bias;
+    output = step(net);
+    printf("\nNet input = %.2f", net);
+    printf("\nPerceptron Output = %d\n", output);
+
+    return 0;
+}
