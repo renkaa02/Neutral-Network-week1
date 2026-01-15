@@ -1,0 +1,16 @@
+#include <stdio.h>
+int step(float x) {
+    if (x >= 0)
+        return 1;
+    else
+        return 0;
+}
+int main() {
+    float net;
+    int output;
+    printf("Enter net input value: ");
+    scanf("%f", &net);
+    output = step(net);
+    printf("\nOutput after step activation = %d\n", output);
+    return 0;
+}
