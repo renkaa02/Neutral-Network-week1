@@ -1,0 +1,25 @@
+#include <stdio.h>
+int step(float x) {
+    if (x >= 0)
+        return 1;
+    else
+        return 0;
+}
+
+int main() {
+    float x1, x2;          
+    float w1 = 1.0;      
+    float w2 = 1.0;      
+    float bias = -1.5;  
+    float net;
+    int output;
+    printf("Enter input x1 (0 or 1): ");
+    scanf("%f", &x1);
+
+    printf("Enter input x2 (0 or 1): ");
+    scanf("%f", &x2);
+    net = (x1 * w1) + (x2 * w2) + bias;
+    output = step(net);
+    printf("\nAND Gate Output = %d\n", output);
+    return 0;
+}
